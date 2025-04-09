@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		546628B22DA698CA00371B56 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 546628B12DA698CA00371B56 /* SnapKit */; };
+		546628B72DA6991100371B56 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 546628B62DA6991100371B56 /* Moya */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5466288F2DA6946100371B56 /* TickerManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TickerManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546628B22DA698CA00371B56 /* SnapKit in Frameworks */,
+				546628B72DA6991100371B56 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,8 @@
 			);
 			name = TickerManager;
 			packageProductDependencies = (
+				546628B12DA698CA00371B56 /* SnapKit */,
+				546628B62DA6991100371B56 /* Moya */,
 			);
 			productName = TickerManager;
 			productReference = 5466288F2DA6946100371B56 /* TickerManager.app */;
@@ -107,6 +116,10 @@
 			);
 			mainGroup = 546628862DA6946100371B56;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				546628B02DA698CA00371B56 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				546628B52DA6991100371B56 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 546628902DA6946100371B56 /* Products */;
 			projectDirPath = "";
@@ -150,7 +163,7 @@
 				INFOPLIST_FILE = TickerManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -178,7 +191,7 @@
 				INFOPLIST_FILE = TickerManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,6 +348,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		546628B02DA698CA00371B56 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		546628B52DA6991100371B56 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		546628B12DA698CA00371B56 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 546628B02DA698CA00371B56 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		546628B62DA6991100371B56 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 546628B52DA6991100371B56 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 546628872DA6946100371B56 /* Project object */;
 }
