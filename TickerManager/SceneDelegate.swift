@@ -18,6 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
+        let customAppearance = createNavBarAppearance()
+        let appearance = UINavigationBar.appearance()
+        appearance.standardAppearance = customAppearance
+        appearance.compactAppearance = customAppearance
+        appearance.scrollEdgeAppearance = customAppearance
+        appearance.compactScrollEdgeAppearance = customAppearance
+
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = BaseNavigationController(rootViewController: ViewController())
         window?.makeKeyAndVisible()
@@ -49,6 +56,47 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+
+    func createNavBarAppearance() -> UINavigationBarAppearance {
+        let backgroundColor = UIColor.yettelGreen
+        let fontColor = UIColor.font
+
+        let customNavBarAppearance = UINavigationBarAppearance()
+
+        // Apply background.
+        customNavBarAppearance.configureWithOpaqueBackground()
+        customNavBarAppearance.backgroundColor = backgroundColor
+
+        // Apply white colored normal and large titles.
+        customNavBarAppearance.titleTextAttributes = [.foregroundColor: fontColor]
+        customNavBarAppearance.largeTitleTextAttributes = [.foregroundColor: fontColor]
+
+        // Apply white color to all the nav bar buttons.
+        let barButtonItemAppearance = UIBarButtonItemAppearance(style: .plain)
+        barButtonItemAppearance.normal.titleTextAttributes = [.foregroundColor: fontColor]
+        barButtonItemAppearance.disabled.titleTextAttributes = [.foregroundColor: UIColor.darkText]
+        barButtonItemAppearance.highlighted.titleTextAttributes = [.foregroundColor: UIColor.label]
+        barButtonItemAppearance.focused.titleTextAttributes = [.foregroundColor: UIColor.white]
+        customNavBarAppearance.buttonAppearance = barButtonItemAppearance
+        customNavBarAppearance.backButtonAppearance = barButtonItemAppearance
+        customNavBarAppearance.doneButtonAppearance = barButtonItemAppearance
+
+        return customNavBarAppearance
+    }
+
+    func setRootViewController(_ viewController: UIViewController, animated: Bool = false) {
+        guard let window = self.window else { return }
+
+        window.rootViewController = viewController
+
+        if animated {
+            let options: UIView.AnimationOptions = .transitionCrossDissolve
+
+            let duration: TimeInterval = 0.3
+
+            UIView.transition(with: window, duration: duration, options: options, animations: nil, completion: nil)
+        }
     }
 
 
