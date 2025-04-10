@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  TickerManager
+//  TicketManager
 //
 //  Created by Csapó Kristóf on 2025. 04. 09..
 //

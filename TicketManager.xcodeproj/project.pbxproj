@@ -12,26 +12,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5466288F2DA6946100371B56 /* TickerManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TickerManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5466288F2DA6946100371B56 /* TicketManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		546628A12DA6946300371B56 /* Exceptions for "TickerManager" folder in "TickerManager" target */ = {
+		546628A12DA6946300371B56 /* Exceptions for "TicketManager" folder in "TicketManager" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 5466288E2DA6946100371B56 /* TickerManager */;
+			target = 5466288E2DA6946100371B56 /* TicketManager */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		546628912DA6946100371B56 /* TickerManager */ = {
+		546628912DA6946100371B56 /* TicketManager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				546628A12DA6946300371B56 /* Exceptions for "TickerManager" folder in "TickerManager" target */,
+				546628A12DA6946300371B56 /* Exceptions for "TicketManager" folder in "TicketManager" target */,
 			);
-			path = TickerManager;
+			path = TicketManager;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -52,7 +52,7 @@
 		546628862DA6946100371B56 = {
 			isa = PBXGroup;
 			children = (
-				546628912DA6946100371B56 /* TickerManager */,
+				546628912DA6946100371B56 /* TicketManager */,
 				546628902DA6946100371B56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,7 +60,7 @@
 		546628902DA6946100371B56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5466288F2DA6946100371B56 /* TickerManager.app */,
+				5466288F2DA6946100371B56 /* TicketManager.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,9 +68,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5466288E2DA6946100371B56 /* TickerManager */ = {
+		5466288E2DA6946100371B56 /* TicketManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 546628A22DA6946300371B56 /* Build configuration list for PBXNativeTarget "TickerManager" */;
+			buildConfigurationList = 546628A22DA6946300371B56 /* Build configuration list for PBXNativeTarget "TicketManager" */;
 			buildPhases = (
 				5466288B2DA6946100371B56 /* Sources */,
 				5466288C2DA6946100371B56 /* Frameworks */,
@@ -81,15 +81,15 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				546628912DA6946100371B56 /* TickerManager */,
+				546628912DA6946100371B56 /* TicketManager */,
 			);
-			name = TickerManager;
+			name = TicketManager;
 			packageProductDependencies = (
 				546628B12DA698CA00371B56 /* SnapKit */,
 				546628B62DA6991100371B56 /* Moya */,
 			);
 			productName = TickerManager;
-			productReference = 5466288F2DA6946100371B56 /* TickerManager.app */;
+			productReference = 5466288F2DA6946100371B56 /* TicketManager.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -107,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5466288A2DA6946100371B56 /* Build configuration list for PBXProject "TickerManager" */;
+			buildConfigurationList = 5466288A2DA6946100371B56 /* Build configuration list for PBXProject "TicketManager" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -125,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5466288E2DA6946100371B56 /* TickerManager */,
+				5466288E2DA6946100371B56 /* TicketManager */,
 			);
 		};
 /* End PBXProject section */
@@ -329,7 +329,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5466288A2DA6946100371B56 /* Build configuration list for PBXProject "TickerManager" */ = {
+		5466288A2DA6946100371B56 /* Build configuration list for PBXProject "TicketManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				546628A52DA6946300371B56 /* Debug */,
@@ -338,7 +338,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		546628A22DA6946300371B56 /* Build configuration list for PBXNativeTarget "TickerManager" */ = {
+		546628A22DA6946300371B56 /* Build configuration list for PBXNativeTarget "TicketManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				546628A32DA6946300371B56 /* Debug */,
