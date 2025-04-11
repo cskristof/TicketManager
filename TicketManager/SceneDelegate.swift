@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appearance.compactScrollEdgeAppearance = customAppearance
 
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = BaseNavigationController(rootViewController: ViewController())
+        window?.rootViewController = BaseNavigationController(rootViewController: TicketSelectorViewController())
         window?.makeKeyAndVisible()
     }
 

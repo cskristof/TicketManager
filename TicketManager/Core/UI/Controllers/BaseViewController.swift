@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol BaseViewControllerProtocol: UIViewController {
     func initLayout()
@@ -15,6 +16,8 @@ protocol BaseViewControllerProtocol: UIViewController {
 
 class BaseViewController: UIViewController, BaseViewControllerProtocol {
 
+    var scrollView: UIScrollView!
+    var svContent: UIView!
     var pagingEnabled: Bool = true
 
     init() {
@@ -56,6 +59,30 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
             }
         } else {
             super.present(viewControllerToPresent, animated: flag, completion: completion)
+        }
+    }
+
+}
+
+extension BaseViewController {
+
+    func addScrollView() {
+        scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
+        // scrollView.contentInsetAdjustmentBehavior = .always
+        view.addSubview(scrollView)
+
+        svContent = UIView()
+        scrollView.addSubview(svContent)
+
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+
+        svContent.snp.makeConstraints { make in
+            make.width.equalTo(view)
+            make.edges.equalToSuperview()
         }
     }
 
