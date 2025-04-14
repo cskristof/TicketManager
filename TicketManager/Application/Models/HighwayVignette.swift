@@ -11,4 +11,11 @@ class HighwayVignette: Codable {
     var cost: Double
     var trxFee: Double
     var sum: Double
+
+    var vignetteDescription: String {
+        switch vignetteType {
+        default:
+            String(localized: "vignette_type_yearly_regional")
+        }
+    }
 }

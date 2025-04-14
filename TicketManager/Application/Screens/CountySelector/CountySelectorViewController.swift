@@ -69,13 +69,13 @@ class CountySelectorViewController: BaseViewController {
         totalCostTitle = UILabel()
         totalCostTitle.textColor = .primary
         totalCostTitle.text = String(localized: "total_cost")
-        totalCostTitle.font = .systemFont(ofSize: 12, weight: .medium)
+        totalCostTitle.font = .systemFont(ofSize: 12, weight: .bold)
         svContent.addSubview(totalCostTitle)
 
         totalCost = UILabel()
         totalCost.text = "0 Ft"
         totalCost.textColor = .primary
-        totalCost.font = .systemFont(ofSize: 30, weight: .bold)
+        totalCost.font = .systemFont(ofSize: 40, weight: .bold)
         svContent.addSubview(totalCost)
 
         continueButton = PrimaryButton()
@@ -133,6 +133,10 @@ class CountySelectorViewController: BaseViewController {
 
     @objc
     func continuePressed() {
+        show(OrderSummaryViewController(vehicle: vehicle,
+                                        selectedVignette: ticket,
+                                        selectedCounties: Array(selectedCounties)),
+             sender: nil)
     }
 
 }

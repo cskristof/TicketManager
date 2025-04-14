@@ -14,5 +14,5 @@ class Dimensions {
     static let pageMargin: CGFloat = 16
     static let buttonHeight: CGFloat = 48
 
-    static let titleFont: UIFont = .systemFont(ofSize: 18, weight: .bold)
+    static let titleFont: UIFont = .systemFont(ofSize: 20, weight: .bold)
 }

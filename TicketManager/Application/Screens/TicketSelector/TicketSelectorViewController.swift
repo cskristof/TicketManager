@@ -97,7 +97,9 @@ class TicketSelectorViewController: BaseViewController {
 extension TicketSelectorViewController: CountryTicketCardDelegate {
 
     func purchaseTicket(_ ticket: HighwayVignette) {
-        // TODO: Navigate to details screen
+        show(OrderSummaryViewController(vehicle: screenData.vehicle,
+                                        selectedVignette: ticket),
+             sender: nil)
     }
 
 }

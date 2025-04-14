@@ -11,6 +11,16 @@
         }
       }
     },
+    "confirm_purchase" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vásárlás megerősítése"
+          }
+        }
+      }
+    },
     "continue" : {
       "localizations" : {
         "hu" : {
@@ -51,6 +61,16 @@
         }
       }
     },
+    "plate_number" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rendszám"
+          }
+        }
+      }
+    },
     "purchase" : {
       "localizations" : {
         "hu" : {
@@ -71,12 +91,42 @@
         }
       }
     },
+    "system_usage_fee" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rendszerhasználati díj"
+          }
+        }
+      }
+    },
     "total_cost" : {
       "localizations" : {
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fizetendő összeg"
+          }
+        }
+      }
+    },
+    "vignette_type" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matrica típusa"
+          }
+        }
+      }
+    },
+    "vignette_type_yearly_regional" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éves vármegyei"
           }
         }
       }
