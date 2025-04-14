@@ -10,7 +10,7 @@ import Moya
 
 class Network {
 
-    static private let provider = MoyaProvider<MultiTarget>(plugins: [LogPlugin()])
+    static private let provider = MoyaProvider<MultiTarget>(stubClosure: MoyaProvider.delayedStub(1), plugins: [LogPlugin()])
 
     static func request(_ target: TargetType) async throws -> Data {
         try await withCheckedThrowingContinuation { continuation in
