@@ -11,10 +11,10 @@ class VehicleModel: Codable {
     var type: String
     var name: String
     var plate: String
-    var country: [Country: String]
+    var country: LocalizedString
     var vignetteType: String
 
-    init(internationalRegistrationCode: String, type: String, name: String, plate: String, country: [Country : String], vignetteType: String) {
+    init(internationalRegistrationCode: String, type: String, name: String, plate: String, country: LocalizedString, vignetteType: String) {
         self.internationalRegistrationCode = internationalRegistrationCode
         self.type = type
         self.name = name

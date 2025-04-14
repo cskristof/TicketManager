@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appearance.compactScrollEdgeAppearance = customAppearance
 
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = BaseNavigationController(rootViewController: TicketSelectorViewController())
+        window?.rootViewController = BaseNavigationController(rootViewController: SplashViewController())
         window?.makeKeyAndVisible()
     }
 
@@ -60,7 +60,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func createNavBarAppearance() -> UINavigationBarAppearance {
         let backgroundColor = UIColor.yettelGreen
-        let fontColor = UIColor.font
+        let fontColor = UIColor.primary
 
         let customNavBarAppearance = UINavigationBarAppearance()
 
