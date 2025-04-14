@@ -27,7 +27,6 @@ class PaymentSuccessViewController: BaseViewController {
     override func initLayout() {
         super.initLayout()
 
-        navigationController?.isNavigationBarHidden = true
         view.backgroundColor = .yettelGreen
 
         confettiImage = UIImageView(image: .confetti)
@@ -75,6 +74,18 @@ class PaymentSuccessViewController: BaseViewController {
             make.leading.trailing.equalToSuperview().inset(Dimensions.pageMargin * 1)
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(32)
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.isNavigationBarHidden = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        navigationController?.isNavigationBarHidden = false
     }
 
     @objc
