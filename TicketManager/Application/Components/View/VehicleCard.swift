@@ -17,7 +17,8 @@ class VehicleCard: BaseCard {
 
 
     override func setComponents() {
-        loader = UIActivityIndicatorView(style: .large)
+        loader = UIActivityIndicatorView(style: .medium)
+        loader.color = .primary
         addSubview(loader)
 
         content = CompressBox()
@@ -27,12 +28,12 @@ class VehicleCard: BaseCard {
         content.addSubview(carImage)
 
         plateNumber = UILabel()
-        plateNumber.textColor = .font
+        plateNumber.textColor = .primary
         plateNumber.font = .systemFont(ofSize: 16, weight: .medium)
         content.addSubview(plateNumber)
 
         ownerName = UILabel()
-        ownerName.textColor = .font
+        ownerName.textColor = .primary
         ownerName.font = .systemFont(ofSize: 14, weight: .light)
         content.addSubview(ownerName)
     }
@@ -40,6 +41,7 @@ class VehicleCard: BaseCard {
     override func makeConstraints() {
         loader.snp.makeConstraints { make in
             make.center.equalToSuperview()
+            make.width.height.equalTo(24)
             make.top.greaterThanOrEqualToSuperview().inset(20)
             make.bottom.lessThanOrEqualToSuperview().inset(20)
         }
@@ -69,7 +71,13 @@ class VehicleCard: BaseCard {
         }
     }
 
+    func startLoading() {
+        loader.startAnimating()
+    }
+
     func configure(vehicle: VehicleModel) {
+        loader.stopAnimating()
+
         plateNumber.text = vehicle.plate
         ownerName.text = vehicle.name
     }
