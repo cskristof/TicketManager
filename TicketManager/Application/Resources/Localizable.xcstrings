@@ -121,6 +121,46 @@
         }
       }
     },
+    "vignette_type_day" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napi országos"
+          }
+        }
+      }
+    },
+    "vignette_type_month" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Havi országos"
+          }
+        }
+      }
+    },
+    "vignette_type_week" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heti (10 napos) országos"
+          }
+        }
+      }
+    },
+    "vignette_type_year" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éves országos"
+          }
+        }
+      }
+    },
     "vignette_type_yearly_regional" : {
       "localizations" : {
         "hu" : {

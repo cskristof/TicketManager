@@ -21,7 +21,7 @@ class TicketSelectorViewController: BaseViewController {
 
     struct ScreenData {
         let vehicle: VehicleModel
-        let vehicleCategories: [VehicleCategory]
+        let vehicleCategory: VehicleCategory?
         let highwayTickets: [HighwayVignette]
         let counties: [County]
     }
@@ -56,7 +56,7 @@ class TicketSelectorViewController: BaseViewController {
         countryTicketCard = CountryTicketCard()
         countryTicketCard.delegate = self
         countryTicketCard.configure(vignettes: screenData.highwayTickets.filter { $0.vignetteType.count == 1 },
-                                    vehicleCategories: screenData.vehicleCategories)
+                                    vehicleCategory: screenData.vehicleCategory)
         svContent.addSubview(countryTicketCard)
 
         regionalNavigationCard = NavigationCard()
@@ -98,6 +98,7 @@ extension TicketSelectorViewController: CountryTicketCardDelegate {
 
     func purchaseTicket(_ ticket: HighwayVignette) {
         show(OrderSummaryViewController(vehicle: screenData.vehicle,
+                                        vehicleCategory: screenData.vehicleCategory,
                                         selectedVignette: ticket),
              sender: nil)
     }

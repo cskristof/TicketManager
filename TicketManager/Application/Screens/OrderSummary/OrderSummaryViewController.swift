@@ -20,6 +20,7 @@ class OrderSummaryViewController: BaseViewController {
     }
 
     let vehicle: VehicleModel
+    let vehicleCategory: VehicleCategory?
     let selectedVignette: HighwayVignette
     let selectedCounties: [County]?
 
@@ -32,8 +33,9 @@ class OrderSummaryViewController: BaseViewController {
     var continueButton: PrimaryButton!
     var cancelButton: SecondaryButton!
 
-    init(vehicle: VehicleModel, selectedVignette: HighwayVignette, selectedCounties: [County]? = nil) {
+    init(vehicle: VehicleModel, vehicleCategory: VehicleCategory? = nil, selectedVignette: HighwayVignette, selectedCounties: [County]? = nil) {
         self.vehicle = vehicle
+        self.vehicleCategory = vehicleCategory
         self.selectedVignette = selectedVignette
         self.selectedCounties = selectedCounties
         super.init()
@@ -126,7 +128,12 @@ class OrderSummaryViewController: BaseViewController {
                 itemList.addArrangedSubview(line)
             }
         } else {
-            let line = createDataLine(title: selectedVignette.vignetteDescription,
+            let title = if let vehicleCategory {
+                "\(vehicleCategory.vignetteCategory) - \(selectedVignette.vignetteDescription)"
+            } else {
+                selectedVignette.vignetteDescription
+            }
+            let line = createDataLine(title: title,
                                       titleFont: .systemFont(ofSize: 16, weight: .bold),
                                       value: String(format: "%.0f Ft", selectedVignette.cost))
             itemList.addArrangedSubview(line)

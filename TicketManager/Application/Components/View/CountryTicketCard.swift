@@ -28,7 +28,7 @@ class CountryTicketCard: BaseCard {
     private var activeIndex: Int = 0
 
     private var vignettes: [HighwayVignette] = []
-    private var vehicleCategories: [VehicleCategory] = []
+    private var vehicleCategory: VehicleCategory?
 
     private var ticketItems: [TicketItem] = []
 
@@ -82,16 +82,14 @@ class CountryTicketCard: BaseCard {
         }
     }
 
-    func configure(vignettes: [HighwayVignette], vehicleCategories: [VehicleCategory]) {
+    func configure(vignettes: [HighwayVignette], vehicleCategory: VehicleCategory?) {
         self.vignettes = vignettes
-        self.vehicleCategories = vehicleCategories
+        self.vehicleCategory = vehicleCategory
 
         options.arrangedSubviews.forEach { options.removeArrangedSubview($0) }
         ticketItems = []
 
         for vignette in vignettes {
-            let vehicleCategory = vehicleCategories.first { $0.category == vignette.vehicleCategory }
-
             let item = TicketItem()
             item.configure(vignette: vignette, vehicleCategory: vehicleCategory)
             options.addArrangedSubview(item)

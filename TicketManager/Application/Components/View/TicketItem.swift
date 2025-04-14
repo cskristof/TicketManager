@@ -29,11 +29,13 @@ class TicketItem: BaseView {
         titleLabel = UILabel()
         titleLabel.font = .systemFont(ofSize: 14, weight: .medium)
         titleLabel.textColor = .primary
+        titleLabel.numberOfLines = 2
         addSubview(titleLabel)
 
         priceLabel = UILabel()
         priceLabel.font = .systemFont(ofSize: 14, weight: .bold)
         priceLabel.textColor = .primary
+        priceLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
         addSubview(priceLabel)
 
         layer.borderWidth = 2
@@ -88,7 +90,7 @@ class TicketItem: BaseView {
 
     func configure(vignette: HighwayVignette, vehicleCategory: VehicleCategory?) {
         titleLabel.text = if let vehicleCategory {
-            "\(vehicleCategory.vignetteCategory) - \(vignette.vignetteType[0])"
+            "\(vehicleCategory.vignetteCategory) - \(vignette.vignetteDescription)"
         } else {
             "\(vignette.vignetteType[0])"
         }

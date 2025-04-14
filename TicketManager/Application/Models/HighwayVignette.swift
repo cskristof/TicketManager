@@ -14,6 +14,14 @@ class HighwayVignette: Codable {
 
     var vignetteDescription: String {
         switch vignetteType {
+        case ["DAY"]:
+            String(localized: "vignette_type_day")
+        case ["WEEK"]:
+            String(localized: "vignette_type_week")
+        case ["MONTH"]:
+            String(localized: "vignette_type_month")
+        case ["YEAR"]:
+            String(localized: "vignette_type_year")
         default:
             String(localized: "vignette_type_yearly_regional")
         }
