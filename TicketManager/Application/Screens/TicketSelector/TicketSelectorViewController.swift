@@ -87,7 +87,9 @@ class TicketSelectorViewController: BaseViewController {
 
     @objc
     func navigationCardPressed() {
-        show(PaymentSuccessViewController(), sender: nil)
+        guard let ticket = (screenData.highwayTickets.first { $0.vignetteType.count > 1 }) else { return }
+
+        show(CountySelectorViewController(vehicle: screenData.vehicle, ticket: ticket, counties: screenData.counties), sender: nil)
     }
 
 }

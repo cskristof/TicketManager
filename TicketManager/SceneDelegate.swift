@@ -68,19 +68,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         customNavBarAppearance.configureWithOpaqueBackground()
         customNavBarAppearance.backgroundColor = backgroundColor
 
-        // Apply white colored normal and large titles.
+        // Apply font color for normal and large titles.
         customNavBarAppearance.titleTextAttributes = [.foregroundColor: fontColor]
         customNavBarAppearance.largeTitleTextAttributes = [.foregroundColor: fontColor]
 
-        // Apply white color to all the nav bar buttons.
+        // Apply color to all the nav bar buttons.
         let barButtonItemAppearance = UIBarButtonItemAppearance(style: .plain)
         barButtonItemAppearance.normal.titleTextAttributes = [.foregroundColor: fontColor]
         barButtonItemAppearance.disabled.titleTextAttributes = [.foregroundColor: UIColor.darkText]
         barButtonItemAppearance.highlighted.titleTextAttributes = [.foregroundColor: UIColor.label]
-        barButtonItemAppearance.focused.titleTextAttributes = [.foregroundColor: UIColor.white]
+        barButtonItemAppearance.focused.titleTextAttributes = [.foregroundColor: fontColor]
         customNavBarAppearance.buttonAppearance = barButtonItemAppearance
         customNavBarAppearance.backButtonAppearance = barButtonItemAppearance
         customNavBarAppearance.doneButtonAppearance = barButtonItemAppearance
+
+        UINavigationBar.appearance().tintColor = fontColor
 
         return customNavBarAppearance
     }

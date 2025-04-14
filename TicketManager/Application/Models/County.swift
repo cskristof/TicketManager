@@ -5,7 +5,9 @@
 //  Created by Csapó Kristóf on 2025. 04. 14..
 //
 
-class County: Codable {
+import Foundation
+
+class County: NSObject, Codable {
     var id: String
     var name: String
 }

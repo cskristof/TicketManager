@@ -1,6 +1,26 @@
 {
   "sourceLanguage" : "hu",
   "strings" : {
+    "cancel" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mégsem"
+          }
+        }
+      }
+    },
+    "continue" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tovább"
+          }
+        }
+      }
+    },
     "country_tickets" : {
       "localizations" : {
         "hu" : {
@@ -47,6 +67,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A matricákat sikeresen kifizetted!"
+          }
+        }
+      }
+    },
+    "total_cost" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fizetendő összeg"
           }
         }
       }
